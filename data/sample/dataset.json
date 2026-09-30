@@ -1,0 +1,11 @@
+{
+  "version": "synthetic-ecommerce-v1",
+  "seed": 42,
+  "users": 60,
+  "items": 100,
+  "events": 4000,
+  "popularity_bias": 1.0,
+  "days": 50,
+  "license": "MIT generated fixtures",
+  "warning": "Latent preferences are generator-only; ranking derives affinity from past events."
+}

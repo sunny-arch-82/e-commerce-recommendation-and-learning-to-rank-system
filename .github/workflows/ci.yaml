@@ -1,0 +1,20 @@
+name: CPU contracts
+on: [push, pull_request]
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y libgomp1
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.12.21"
+          enable-cache: true
+      - run: uv python install 3.11
+      - run: uv sync --frozen --python 3.11
+      - run: uv run ruff check src tests
+      - run: uv run pytest -q
+        env:
+          OMP_NUM_THREADS: "2"
+# Install dependencies requires network; tests use only generated local data.
+# One tiny BPR/LambdaMART fixture tests lifecycle mechanics, no tuning or quality benchmark.

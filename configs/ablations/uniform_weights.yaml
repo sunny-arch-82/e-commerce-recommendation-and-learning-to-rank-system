@@ -1,0 +1,3 @@
+data_dir: data/sample
+output_dir: artifacts/ablation-uniform_weights
+event_weights: {view: 1.0, click: 1.0, add_to_cart: 1.0, purchase: 1.0}

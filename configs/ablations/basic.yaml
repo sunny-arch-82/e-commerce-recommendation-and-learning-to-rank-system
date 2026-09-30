@@ -1,0 +1,3 @@
+data_dir: data/sample
+output_dir: artifacts/ablation-basic
+feature_set: basic

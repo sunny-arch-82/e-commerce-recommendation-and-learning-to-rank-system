@@ -1,0 +1,3 @@
+data_dir: data/sample
+output_dir: artifacts/ablation-no_cf_score
+include_cf_score: false

@@ -1,0 +1,27 @@
+data_dir: data/sample
+output_dir: artifacts/demo
+seed: 42
+candidate_cutoff: '2026-01-21T00:00:00Z'
+validation_start: '2026-01-31T00:00:00Z'
+test_start: '2026-02-10T00:00:00Z'
+test_end: '2026-02-20T00:00:00Z'
+event_weights: {view: 1.0, click: 2.0, add_to_cart: 4.0, purchase: 8.0}
+factors: 16
+bpr_epochs: 5
+candidate_count: 50
+candidate_source: collaborative
+fallback: category
+exclude_purchased: true
+exclude_seen: false
+freshness_fraction: 0.1
+popularity_fraction: 0.2
+negative_strategy: hard
+negatives_per_query: 40
+feature_set: rich
+include_cf_score: true
+relevance_min: 2
+ks: [5, 10, 20]
+ranker_trees: 80
+ranker_learning_rate: 0.05
+ranker_leaves: 15
+ranker_threads: 2

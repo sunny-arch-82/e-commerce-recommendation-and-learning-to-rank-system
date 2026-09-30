@@ -1,0 +1,3 @@
+data_dir: data/sample
+output_dir: artifacts/ablation-random_negatives
+negative_strategy: random

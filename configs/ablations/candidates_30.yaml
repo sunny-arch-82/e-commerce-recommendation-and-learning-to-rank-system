@@ -1,0 +1,3 @@
+data_dir: data/sample
+output_dir: artifacts/ablation-candidates_30
+candidate_count: 30
